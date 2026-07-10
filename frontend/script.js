@@ -1,4 +1,5 @@
-async function analyzeMatch() {
+ async function analyzeMatch() {
+
     const response = await fetch("http://localhost:8000/analyze", {
         method: "POST",
         headers: {
@@ -13,5 +14,6 @@ async function analyzeMatch() {
 
     const data = await response.json();
 
-    console.log(data);
+    document.getElementById("result").innerText =
+        JSON.stringify(data);
 }
