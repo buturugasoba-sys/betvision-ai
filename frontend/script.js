@@ -1,4 +1,5 @@
- async function analyzeMatch() {
+
+async function analyzeMatch() {
 
     const response = await fetch("http://localhost:8000/analyze", {
         method: "POST",
