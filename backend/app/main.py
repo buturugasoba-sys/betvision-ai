@@ -1,10 +1,13 @@
-from fastapi import FastAPI from .ai_router import router
+from fastapi import FastAPI
+from .ai_router import router
 
 app = FastAPI(
     title="BetVision AI API",
     description="AI sports analysis platform",
     version="0.1"
 )
+
+app.include_router(router)
 
 
 @app.get("/")
